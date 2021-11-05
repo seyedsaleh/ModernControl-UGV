@@ -7,7 +7,8 @@
 
 **Course: Control Modern | Supervisor: Dr. Iman Sharifi**
 
-<p> <img src="https://user-images.githubusercontent.com/47852354/139436433-2c078e1f-9559-4b4c-acc7-679acafc12a0.JPG" width="500"> </p> 
+<p> <img src="https://user-images.githubusercontent.com/55730628/140566491-4e9c8b46-d6b5-4d54-8ff0-d58420be90c1.png" width="500"> </p> 
+ 
 
 ### MODELLING, PLANNING AND NONLINEAR CONTROL TECHNIQUES FOR AUTONOMOUS VEHICLES
 
