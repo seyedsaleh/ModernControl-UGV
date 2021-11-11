@@ -29,13 +29,25 @@ To achieve dynamic equations, we need to achieve a balance of force and torque o
 The equations that describe the equilibrium of longitudinal forces are as follows:
 <p> <img src="https://user-images.githubusercontent.com/55730628/141247058-e4425ab1-4e7f-42fe-907e-80b3ee7a9275.png" width="300"> </p> 
 where the forces Fxi are the longitudinal wheel forces represented in Figure above as blue force vectors, the forces Fyi are the lateral wheel forces represented as green force vectors (both wheel forces will be presented in Tire model section), the term di represents the steer angle of front wheels, ax is the inertial acceleration along the CoG X axis and the rest of terms are defined below.
-<p> <img src="https://user-images.githubusercontent.com/55730628/141248286-9d27862e-56bb-4bf9-9ce0-92d18f2e8228.png" width="300"> </p> 
+<p> <img src="https://user-images.githubusercontent.com/55730628/141248286-9d27862e-56bb-4bf9-9ce0-92d18f2e8228.png" width="200"> </p> 
 where vx_dot is the acceleration due to the motion along the X axis and the product vy · wz represent the centripetal acceleration produced when the car is turning.
-
 The aerodynamic force is:
 <p> <img src="https://user-images.githubusercontent.com/55730628/141248410-00c6cacb-6f26-449a-89d1-d28047c78909.png" width="300"> </p> 
 where ru_air is the density of the air (1.2 kg/m3 at normal temperature and pressure), the Cdrag represents the drag coefficient, the A_front term is the frontal area of the vehicle and the last term vx represents the flow velocity that in this case corresponds to the vehicle velocity since the wind flow velocity cannot be measured.
 The rolling resistance is:
+<p> <img src="https://user-images.githubusercontent.com/55730628/141249101-64b81e2f-ae8e-44a7-9fcf-68262e539d6b.png" width="300"> </p> 
+where the term fr is the rolling resistance coefficient, m is the mass of the car and g is the gravity acceleration.
+But when the vehicle is uphill or downhill, a new force appears due to the slope of the road:
+<p> <img src="https://user-images.githubusercontent.com/55730628/141249466-3b3baee4-59db-4d6f-9220-4d69d4791924.png" width="300"> </p> 
+where the bx means the road tilt.
+The equations that define lateral dynamics are similar to the longitudinal equations. These equations are as follows:
+<p> <img src="https://user-images.githubusercontent.com/55730628/141249645-adbd8ea5-e7ca-42e2-ac76-e1bf09cf0ef5.png" width="200"> </p> 
+The lateral acceleration can be written as:
+<p> <img src="https://user-images.githubusercontent.com/55730628/141249739-4eea09cd-4c93-4c25-8f79-757d96fd644b.png" width="200"> </p> 
+The last term F_tilt is only taken into account when the road is tilted a long the lateral axis, it means when the roll angle is not zero.
+<p> <img src="https://user-images.githubusercontent.com/55730628/141250138-a6bf1b63-476f-4872-ad4b-cfc10717ad12.png" width="220"> </p> 
+
+
 
 
 
