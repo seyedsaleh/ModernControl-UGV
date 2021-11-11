@@ -3,7 +3,7 @@
 
 # System Kinematics and Dynamics Model and Controller Design of an Autonomous Vehicle
 
-## Team members: [Mohammadsaleh Tabatabaei](http://github.com/seyedsaleh) - [Salman Amimotlaq](http://github.com/SMotlaq) - Shima Naseri - Amin Lari - Tara Radjabi
+## Team members: [Mohammadsaleh Tabatabaei](http://github.com/seyedsaleh) - [Salman Amimotlaq](http://github.com/SMotlaq) - [Shima Naseri](https://github.com/shimanaseri) - Amin Lari - Tara Radjabi
 
 **Course: Control Modern | Supervisor: Dr. Iman Sharifi**
 
@@ -14,11 +14,30 @@
 
 *This project is based on a system from reference article.*
 
-description
+Today, one of the most challenging topics in the world is the issue of self-driving cars. Companies are investing heavily in the development of this technology and have extensive research on the subject, including Tesla and Google.
+A self-driving car has several parts; Initially, it must receive feedback from the environment with its sensors (such as ultrasonic proximity sensors, camera for image processing, GPS satellite communication module, and speed and acceleration sensors).
+Then, with data integration methods, this information reaches the controller whose main task is to apply the desired input to the system operators to receive the desired output (such as throttle, brake, gear adjustment and steering angle).
 
 
-### titr1
-<p> <img src="https://user-images.githubusercontent.com/47852354/139436433-2c078e1f-9559-4b4c-acc7-679acafc12a0.JPG" width="500"> </p> 
+### MODELING OF A MOBILE ROBOT
+**Dynamic model**
+There are many approaches to the dynamic model of the system, some models consider the dynamics of the engine, the dynamics of the braking system and the movement of the roll and the step, and others only represent the dynamics of the vehicle. In this section, the dynamic four-wheel drive model is examined, which considers six degrees of freedom in the car (to consider all possible movements of the car).
+
+<p> <img src="https://user-images.githubusercontent.com/55730628/141247964-53ce2948-1ee8-48d1-9f8c-d30952e2b1f3.png" width="500"> </p> 
+To understand the set of equations that describe the system, it is necessary to understand the vehicle's motion on the X-Y plane, which will include the vehicle's roll and step subsystems, propulsion dynamics, brake dynamics, and engine. Finally, using the obtained motion models, the system description matrices can be obtained.
+To achieve dynamic equations, we need to achieve a balance of force and torque on each axis. Therefore, the X-axis is defined as the longitudinal axis of the car, the Y-axis as the lateral axis and the Z-axis as perpendicular to the road. This XYZ frame is located in the center of gravity of the car, hereinafter referred to as CoG. For simplicity, the Z axis is not considered in this project.
+The equations that describe the equilibrium of longitudinal forces are as follows:
+<p> <img src="https://user-images.githubusercontent.com/55730628/141247058-e4425ab1-4e7f-42fe-907e-80b3ee7a9275.png" width="300"> </p> 
+where the forces Fxi are the longitudinal wheel forces represented in Figure above as blue force vectors, the forces Fyi are the lateral wheel forces represented as green force vectors (both wheel forces will be presented in Tire model section), the term di represents the steer angle of front wheels, ax is the inertial acceleration along the CoG X axis and the rest of terms are defined below.
+<p> <img src="https://user-images.githubusercontent.com/55730628/141248286-9d27862e-56bb-4bf9-9ce0-92d18f2e8228.png" width="300"> </p> 
+where vx_dot is the acceleration due to the motion along the X axis and the product vy · wz represent the centripetal acceleration produced when the car is turning.
+
+The aerodynamic force is:
+<p> <img src="https://user-images.githubusercontent.com/55730628/141248410-00c6cacb-6f26-449a-89d1-d28047c78909.png" width="300"> </p> 
+where ru_air is the density of the air (1.2 kg/m3 at normal temperature and pressure), the Cdrag represents the drag coefficient, the A_front term is the frontal area of the vehicle and the last term vx represents the flow velocity that in this case corresponds to the vehicle velocity since the wind flow velocity cannot be measured.
+The rolling resistance is:
+
+
 
 ### titr2
 
