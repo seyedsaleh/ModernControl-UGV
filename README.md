@@ -6,28 +6,25 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 
 
 <!-- PROJECT LOGO -->
-<i> In The Name Of God </i> 
 <br />
 <div align="center">
+  <i align="center"> In The Name Of God </i>
 
   <h3 align="center">ModernControl-UGV</h3>
 
   <p align="center">
-    System Kinematics and Dynamics Model and Controller Design of an Autonomous Vehicle
+    Modeling, Planning and Nonlinear Control Techniques For Autonomous Vehicles 🎛️🚘
+    <br />
+    <b> System Kinematics and Dynamics Model and Controller Design </b>
     <br />
     <a href="https://github.com/seyedsaleh/ModernControl-UGV"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/seyedsaleh/ModernControl-UGV">View Demo</a>
-    ·
-    <a href="https://github.com/seyedsaleh/ModernControl-UGV/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/seyedsaleh/ModernControl-UGV/issues">Request Feature</a>
+    <a href="https://github.com/seyedsaleh/ModernControl-UGV/issues">Report Bug & Request Feature</a>
   </p>
 </div>
 
@@ -43,21 +40,11 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#dataset">Dataset</a></li>
+    <li><a href="#parts">Parts</a></li>
+    <li><a href="#results">Results</a></li>
     <li><a href="#refereces">Refereces</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
   </ol>
 </details>
 
@@ -66,18 +53,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<p> <img src="https://user-images.githubusercontent.com/55730628/140566491-4e9c8b46-d6b5-4d54-8ff0-d58420be90c1.png" width="700"> </p> 
+Today, one of the most challenging topics in the world is the issue of self-driving cars. Companies are investing heavily in the development of this technology and have extensive research on the subject, including Tesla and Google.
+A self-driving car has several parts; Initially, it must receive feedback from the environment with its sensors (such as ultrasonic proximity sensors, camera for image processing, GPS satellite communication module, and speed and acceleration sensors).
+Then, with data integration methods, this information reaches the controller whose main task is to apply the desired input to the system operators to receive the desired output (such as throttle, brake, gear adjustment and steering angle).
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+*This project is based on a robot from reference article [1].*
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -85,13 +66,11 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Major softwares/libraries used to this project:
 
-* [Python 3.8](https://www.python.org/)
-* [Tensorflow , Keras](https://www.tensorflow.org/)
-* [Midi2audio](https://github.com/bzamecnik/midi2audio)
-* [Music21](https://web.mit.edu/music21/)
-* [Numpy](https://numpy.org/)
+* [MATLAB 2020a](https://www.mathworks.com/products/matlab.html)
+  * Control System Toolbox
+* [Simulink v10] (https://www.mathworks.com/products/simulink.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -99,21 +78,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 
 
-<!-- 
-
-**Course: Control Modern | Supervisor: Dr. Iman Sharifi** -->
-
-
-### MODELLING, PLANNING AND NONLINEAR CONTROL TECHNIQUES FOR AUTONOMOUS VEHICLES
-
-*This project is based on a system from reference article.*
-
-Today, one of the most challenging topics in the world is the issue of self-driving cars. Companies are investing heavily in the development of this technology and have extensive research on the subject, including Tesla and Google.
-A self-driving car has several parts; Initially, it must receive feedback from the environment with its sensors (such as ultrasonic proximity sensors, camera for image processing, GPS satellite communication module, and speed and acceleration sensors).
-Then, with data integration methods, this information reaches the controller whose main task is to apply the desired input to the system operators to receive the desired output (such as throttle, brake, gear adjustment and steering angle).
+<!-- PARTS -->
+## Parts
 
 
-### MODELING OF A MOBILE ROBOT
+**MODELING OF A MOBILE ROBOT**
+
 **Dynamic model**
 There are many approaches to the dynamic model of the system, some models consider the dynamics of the engine, the dynamics of the braking system and the movement of the roll and the step, and others only represent the dynamics of the vehicle. In this section, the dynamic four-wheel drive model is examined, which considers six degrees of freedom in the car (to consider all possible movements of the car).
 
@@ -131,15 +101,14 @@ Taylor expansion method has been used to linearize both dynamic and kinematic sy
 Due to the high complexity of the dynamic system, the problem controller was generated using the kinematic system and then the dynamic model was used for the final test of the obtained controller.
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-### titr2
+<!-- RESULTS -->
+## Results
 
-### titr3
-
-
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
@@ -148,7 +117,6 @@ Due to the high complexity of the dynamic system, the problem controller was gen
 ## Refereces
 
 [1] *Mogren, Olof. (2016). C-RNN-GAN: Continuous recurrent neural networks with adversarial training. [arXiv:1611.09904](https://arxiv.org/abs/1611.09904).* 
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -161,8 +129,10 @@ Seyedmohammadsaleh Mirzatabatabaei - [@seyedsaleh](https://github.com/seyedsaleh
 
 Salman Amimotlagh - [@SMotlaq](https://github.com/SMotlaq) - pilot.motlaq@gmail.com
 
-Shima Naseri - [@shimanaseri](https://github.com/shimanaseri) - Shima's Email
+Shima Naseri - [@shimanaseri](https://github.com/shimanaseri) - shima.s.naseri@gmail.com
+
 Amin Lari
+
 Tara Radjabi
 
 Project Link: [https://github.com/seyedsaleh/ModernControl-UGV](https://github.com/seyedsaleh/ModernControl-UGV)
@@ -171,19 +141,12 @@ Project Link: [https://github.com/seyedsaleh/ModernControl-UGV](https://github.c
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- ROADMAP -->
+## Roadmap
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+- [x] Project has been done.
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+See the [open issues](https://github.com/seyedsaleh/ModernControl-UGV/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -208,6 +171,3 @@ Use this space to list resources you find helpful and would like to give credit 
 [stars-url]: https://github.com/seyedsaleh/ModernControl-UGV/stargazers
 [issues-shield]: https://img.shields.io/github/issues/seyedsaleh/ModernControl-UGV.svg?style=for-the-badge
 [issues-url]: https://github.com/seyedsaleh/ModernControl-UGV/issues
-[license-shield]: https://img.shields.io/github/license/seyedsaleh/ModernControl-UGV.svg?style=for-the-badge
-[license-url]: https://github.com/seyedsaleh/ModernControl-UGV/blob/master/LICENSE.txt
-[product-screenshot]: https://user-images.githubusercontent.com/55730628/140566491-4e9c8b46-d6b5-4d54-8ff0-d58420be90c1.png
