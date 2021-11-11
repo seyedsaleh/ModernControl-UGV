@@ -23,29 +23,12 @@ Then, with data integration methods, this information reaches the controller who
 **Dynamic model**
 There are many approaches to the dynamic model of the system, some models consider the dynamics of the engine, the dynamics of the braking system and the movement of the roll and the step, and others only represent the dynamics of the vehicle. In this section, the dynamic four-wheel drive model is examined, which considers six degrees of freedom in the car (to consider all possible movements of the car).
 
-<p> <img src="https://user-images.githubusercontent.com/55730628/141247964-53ce2948-1ee8-48d1-9f8c-d30952e2b1f3.png" width="500"> </p> 
+<p> <img src="https://user-images.githubusercontent.com/55730628/141247964-53ce2948-1ee8-48d1-9f8c-d30952e2b1f3.png" width="300"> </p> 
 To understand the set of equations that describe the system, it is necessary to understand the vehicle's motion on the X-Y plane, which will include the vehicle's roll and step subsystems, propulsion dynamics, brake dynamics, and engine. Finally, using the obtained motion models, the system description matrices can be obtained.
 To achieve dynamic equations, we need to achieve a balance of force and torque on each axis. Therefore, the X-axis is defined as the longitudinal axis of the car, the Y-axis as the lateral axis and the Z-axis as perpendicular to the road. This XYZ frame is located in the center of gravity of the car, hereinafter referred to as CoG. For simplicity, the Z axis is not considered in this project.
-The equations that describe the equilibrium of longitudinal forces are as follows:
-<p> <img src="https://user-images.githubusercontent.com/55730628/141247058-e4425ab1-4e7f-42fe-907e-80b3ee7a9275.png" width="300"> </p> 
-where the forces Fxi are the longitudinal wheel forces represented in Figure above as blue force vectors, the forces Fyi are the lateral wheel forces represented as green force vectors (both wheel forces will be presented in Tire model section), the term di represents the steer angle of front wheels, ax is the inertial acceleration along the CoG X axis and the rest of terms are defined below.
-<p> <img src="https://user-images.githubusercontent.com/55730628/141248286-9d27862e-56bb-4bf9-9ce0-92d18f2e8228.png" width="200"> </p> 
-where vx_dot is the acceleration due to the motion along the X axis and the product vy · wz represent the centripetal acceleration produced when the car is turning.
-The aerodynamic force is:
-<p> <img src="https://user-images.githubusercontent.com/55730628/141248410-00c6cacb-6f26-449a-89d1-d28047c78909.png" width="300"> </p> 
-where ru_air is the density of the air (1.2 kg/m3 at normal temperature and pressure), the Cdrag represents the drag coefficient, the A_front term is the frontal area of the vehicle and the last term vx represents the flow velocity that in this case corresponds to the vehicle velocity since the wind flow velocity cannot be measured.
-The rolling resistance is:
-<p> <img src="https://user-images.githubusercontent.com/55730628/141249101-64b81e2f-ae8e-44a7-9fcf-68262e539d6b.png" width="300"> </p> 
-where the term fr is the rolling resistance coefficient, m is the mass of the car and g is the gravity acceleration.
-But when the vehicle is uphill or downhill, a new force appears due to the slope of the road:
-<p> <img src="https://user-images.githubusercontent.com/55730628/141249466-3b3baee4-59db-4d6f-9220-4d69d4791924.png" width="300"> </p> 
-where the bx means the road tilt.
-The equations that define lateral dynamics are similar to the longitudinal equations. These equations are as follows:
-<p> <img src="https://user-images.githubusercontent.com/55730628/141249645-adbd8ea5-e7ca-42e2-ac76-e1bf09cf0ef5.png" width="200"> </p> 
-The lateral acceleration can be written as:
-<p> <img src="https://user-images.githubusercontent.com/55730628/141249739-4eea09cd-4c93-4c25-8f79-757d96fd644b.png" width="200"> </p> 
-The last term F_tilt is only taken into account when the road is tilted a long the lateral axis, it means when the roll angle is not zero.
-<p> <img src="https://user-images.githubusercontent.com/55730628/141250138-a6bf1b63-476f-4872-ad4b-cfc10717ad12.png" width="220"> </p> 
+<p> <img src="https://user-images.githubusercontent.com/55730628/141251113-30c17c75-c8ac-45f5-ae58-74c47c5c5a39.png" width="600"> </p> 
+**Kinematic model**
+
 
 
 
