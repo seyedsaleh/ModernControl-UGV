@@ -28,7 +28,13 @@ To understand the set of equations that describe the system, it is necessary to 
 To achieve dynamic equations, we need to achieve a balance of force and torque on each axis. Therefore, the X-axis is defined as the longitudinal axis of the car, the Y-axis as the lateral axis and the Z-axis as perpendicular to the road. This XYZ frame is located in the center of gravity of the car, hereinafter referred to as CoG. For simplicity, the Z axis is not considered in this project.
 <p> <img src="https://user-images.githubusercontent.com/55730628/141251113-30c17c75-c8ac-45f5-ae58-74c47c5c5a39.png" width="600"> </p> 
 **Kinematic model**
+<p> <img src="https://user-images.githubusercontent.com/55730628/141262263-2bed0700-e832-477a-879b-935dd9062c9a.png" width="300"> </p>
 
+One of the major differences between the kinematic model and the dynamic model is the assumption of null skidding assumption and the consideration of small lateral forces. Both assume the idea of low speed, so it can be said that a cinematic model offers acceptable results when the car is moving at low speed. Other differences between the two include that the model does not take into account neither mass nor inertia between the others. In this section, the equations are presented for simplicity based on a two-wheeled kinematic model.
+<p> <img src="https://user-images.githubusercontent.com/55730628/141262216-060995ae-86db-42ec-88f8-16f68e49b783.png" width="300"> </p>
+
+Taylor expansion method has been used to linearize both dynamic and kinematic systems.
+Due to the high complexity of the dynamic system, the problem controller was generated using the kinematic system and then the dynamic model was used for the final test of the obtained controller.
 
 
 
