@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<p> <img src="https://user-images.githubusercontent.com/47852354/141317273-52e8aff4-a991-4d04-ae4c-abd36c8df3a9.png" width="700"> </p> 
+<p> <img src="https://user-images.githubusercontent.com/47852354/141318398-34b3417e-73f6-4230-96f6-200614180e47.PNG" width="1000"> </p> 
 Today, one of the most challenging topics in the world is the issue of self-driving cars. Companies are investing heavily in the development of this technology and have extensive research on the subject, including Tesla and Google.
 A self-driving car has several parts; Initially, it must receive feedback from the environment with its sensors (such as ultrasonic proximity sensors, camera for image processing, GPS satellite communication module, and speed and acceleration sensors).
 Then, with data integration methods, this information reaches the controller whose main task is to apply the desired input to the system operators to receive the desired output (such as throttle, brake, gear adjustment and steering angle).
@@ -84,13 +84,16 @@ Major softwares/libraries used to this project:
 **MODELING OF A MOBILE ROBOT**
 
 **Dynamic model**
+
 There are many approaches to the dynamic model of the system, some models consider the dynamics of the engine, the dynamics of the braking system and the movement of the roll and the step, and others only represent the dynamics of the vehicle. In this section, the dynamic four-wheel drive model is examined, which considers six degrees of freedom in the car (to consider all possible movements of the car).
 
 <p> <img src="https://user-images.githubusercontent.com/55730628/141247964-53ce2948-1ee8-48d1-9f8c-d30952e2b1f3.png" width="300"> </p> 
 To understand the set of equations that describe the system, it is necessary to understand the vehicle's motion on the X-Y plane, which will include the vehicle's roll and step subsystems, propulsion dynamics, brake dynamics, and engine. Finally, using the obtained motion models, the system description matrices can be obtained.
 To achieve dynamic equations, we need to achieve a balance of force and torque on each axis. Therefore, the X-axis is defined as the longitudinal axis of the car, the Y-axis as the lateral axis and the Z-axis as perpendicular to the road. This XYZ frame is located in the center of gravity of the car, hereinafter referred to as CoG. For simplicity, the Z axis is not considered in this project.
 <p> <img src="https://user-images.githubusercontent.com/55730628/141251113-30c17c75-c8ac-45f5-ae58-74c47c5c5a39.png" width="600"> </p> 
+
 **Kinematic model**
+
 <p> <img src="https://user-images.githubusercontent.com/55730628/141262263-2bed0700-e832-477a-879b-935dd9062c9a.png" width="300"> </p>
 
 One of the major differences between the kinematic model and the dynamic model is the assumption of null skidding assumption and the consideration of small lateral forces. Both assume the idea of low speed, so it can be said that a cinematic model offers acceptable results when the car is moving at low speed. Other differences between the two include that the model does not take into account neither mass nor inertia between the others. In this section, the equations are presented for simplicity based on a two-wheeled kinematic model.
@@ -114,11 +117,20 @@ Due to the high complexity of the dynamic system, the problem controller was gen
 
 <!-- REFERENCES -->
 ## Refereces
+[1] *Eugenio Alcalá Baselga, “MODELLING, PLANNING AND NONLINEAR CONTROL TECHNIQUES FOR AUTONOMOUS VEHICLES, ” June 2016.*
 
-[1] *Mogren, Olof. (2016). C-RNN-GAN: Continuous recurrent neural networks with adversarial training. [arXiv:1611.09904](https://arxiv.org/abs/1611.09904).* 
+[2] *Laguerre based model predictive control for trajectory tracking of nonholonomic mobile robots-Proceedings of the 6th RSI-International Conference on Robotics and Mechatronics (IcRoM 2018)*
 
+[3] *Control of Wheeled Mobile Robots: An Experimental Overview Alessandro De Luca, Giuseppe Oriolo, Marilena Vendittelli- Dipartimento di Informatica e Sistemistica, Universit`a degli Studi di Roma “La Sapienza”, Italy*
+
+[4] *STABILIZATION CONTROL OF THE DIFFERENTIAL MOBILE ROBOT USING LYAPUNOV FUNCTION AND EXTENDED KALMAN FILTER -Thuan Hoang Tran, Manh Duong Phung, Thi Thanh Van Nguyen , Quang Vinh Tran University of Engineering and Technology, VNU, Hanoi City, Vietnam*
+
+[5] *Nonlinear control of nonholonomic mobile robot formation-Travis Alan Dierks*
+
+[6] *M.H. Shafiei & F. Monfared (2019) Design of a robust tracking controller for a nonholonomic mobile robot with side slipping based on Lyapunov Redesign and nonlinear H∞ methods, Systems Science & Control Engineering, 7:1, 1-11, DOI:10.1080/21642583.2018.1555061*
+
+[7] *2015 IEEE Intelligent Vehicles Symposium (IV) June 28 - July 1, 2015. COEX, Seoul, Korea- Kinematic and Dynamic Vehicle Models for Autonomous Driving Control Design Jason Kong, Mark Pfeiffer, Georg Schildbach, Francesco Borrelli*
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
@@ -130,9 +142,7 @@ Salman Amimotlagh - [@SMotlaq](https://github.com/SMotlaq) - pilot.motlaq@gmail.
 
 Shima Naseri - [@shimanaseri](https://github.com/shimanaseri) - shima.s.naseri@gmail.com
 
-Amin Lari
-
-Tara Radjabi
+Amin Lari - Tara Radjabi
 
 Project Link: [https://github.com/seyedsaleh/ModernControl-UGV](https://github.com/seyedsaleh/ModernControl-UGV)
 
