@@ -53,12 +53,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<p> <img src="https://user-images.githubusercontent.com/55730628/140566491-4e9c8b46-d6b5-4d54-8ff0-d58420be90c1.png" width="700"> </p> 
+<p> <img src="https://user-images.githubusercontent.com/47852354/141317273-52e8aff4-a991-4d04-ae4c-abd36c8df3a9.png" width="700"> </p> 
 Today, one of the most challenging topics in the world is the issue of self-driving cars. Companies are investing heavily in the development of this technology and have extensive research on the subject, including Tesla and Google.
 A self-driving car has several parts; Initially, it must receive feedback from the environment with its sensors (such as ultrasonic proximity sensors, camera for image processing, GPS satellite communication module, and speed and acceleration sensors).
 Then, with data integration methods, this information reaches the controller whose main task is to apply the desired input to the system operators to receive the desired output (such as throttle, brake, gear adjustment and steering angle).
 
-*This project is based on a robot from reference article [1].*
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -70,7 +69,7 @@ Major softwares/libraries used to this project:
 
 * [MATLAB 2020a](https://www.mathworks.com/products/matlab.html)
   * Control System Toolbox
-* [Simulink v10] (https://www.mathworks.com/products/simulink.html)
+* [Simulink v10](https://www.mathworks.com/products/simulink.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
